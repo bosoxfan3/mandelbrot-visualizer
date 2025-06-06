@@ -26,7 +26,6 @@ function delay(ms) {
 }
 
 window.onload = async function () {
-    console.log('Page loaded');
     for (let i = -2; i <= 2; i += 0.01) {
         for (let j = -2; j <= 2; j += 0.01) {
             const isBounded = getIsBounded(i, j);

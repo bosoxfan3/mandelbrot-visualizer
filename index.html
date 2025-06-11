@@ -3,21 +3,63 @@
     <head>
         <meta charset="UTF-8" />
         <title>Mandelbrot Visualizer</title>
-        <style>
-            body {
-                margin: auto;
-                text-align: center;
-            }
-            canvas {
-                display: block;
-                margin: auto;
-            }
-        </style>
+        <link rel="stylesheet" href="index.css" />
     </head>
     <body>
         <h1>Mandelbrot Visualizer</h1>
         <h3>lightblue = bounded, black = unbounded</h3>
         <canvas id="myCanvas" width="500" height="500"></canvas>
+        <form id="form">
+            <div class="input-group">
+                <div class="input-and-label">
+                    <label for="xCanvas">Canvas Width (in px)</label>
+                    <input
+                        type="number"
+                        id="xCanvas"
+                        name="xCanvas"
+                        value="500"
+                        min="100"
+                        max="2000"
+                    />
+                </div>
+                <div class="input-and-label">
+                    <label for="yCanvas">Canvas Height (in px)</label>
+                    <input
+                        type="number"
+                        id="yCanvas"
+                        name="yCanvas"
+                        value="500"
+                        min="100"
+                        max="2000"
+                    />
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="input-and-label">
+                    <label for="xResolution">Resolution Width</label>
+                    <input
+                        type="number"
+                        id="xResolution"
+                        name="xResolution"
+                        value="500"
+                        min="10"
+                        max="1000"
+                    />
+                </div>
+                <div class="input-and-label">
+                    <label for="yResolution">Resolution Height</label>
+                    <input
+                        type="number"
+                        id="yResolution"
+                        name="yResolution"
+                        value="500"
+                        min="10"
+                        max="1000"
+                    />
+                </div>
+            </div>
+            <button type="submit">Update</button>
+        </form>
         <script src="index.js"></script>
     </body>
 </html>
